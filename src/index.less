@@ -1,0 +1,126 @@
+.stepContainer {
+    display: flex;
+    box-sizing: border-box;
+
+    .stepItem {
+        flex: 1;
+        box-sizing: border-box;
+
+        .iconFinish {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+            border: 2px solid #009bff;
+
+            .check {
+                box-sizing: border-box;
+                width: 11px;
+                height: 8px;
+                position: relative;
+                top: 2px;
+
+                .checkItem {
+                    position: absolute;
+                    background-color: #009bff;
+                    transform-origin: left bottom;
+                }
+
+                .checkLeftFinish {
+                    .checkItem;
+                    height: 2px;
+                    width: 5px;
+                    left: 0px;
+                    top: 1px;
+                    transform: rotate(45deg);
+                }
+
+                .checkLeftProcess {
+                    .checkLeftFinish;
+                    background-color: white;
+                }
+
+                .checkRightFinish {
+                    .checkItem;
+                    height: 2px;
+                    width: 10px;
+                    left: 4px;
+                    top: 5px;
+                    transform: rotate(-45deg);
+                }
+
+                .checkRightProcess {
+                    .checkRightFinish;
+                    background-color: white;
+                }
+            }
+        }
+
+        .iconCurrent {
+            .iconFinish;
+            background-color: #009bff;
+        }
+
+        .iconfWaiting {
+            .iconFinish;
+            border: 2px solid #d8d8d8;
+            background-color: #ffffff;
+        }
+
+        .tail {
+            position: relative;
+            top: 13px;
+            left: 24px;
+            height: 2px;
+            background: #e8e8e8;
+            width: calc(~"100% - 23px");
+        }
+
+        .tailFinish {
+            .tail;
+            background-color: #009bff;
+        }
+    }
+
+    .stepItem:last-child {
+        flex: none;
+    }
+
+    .stepTitleFinish {
+        font-size: 16px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        color: rgba(102, 102, 102, 1);
+        margin: 11px 0;
+    }
+
+    .stepTitleCurrent {
+        .stepTitleFinish;
+        color: rgba(51, 51, 51, 1);
+    }
+
+    .stepTitleWaiting {
+        .stepTitleFinish;
+        color: rgba(153, 153, 153, 1);
+    }
+
+    .stepDescFinish {
+        font-size: 14px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        color: rgba(153, 153, 153, 1);
+    }
+
+    .stepDescCurrent {
+        .stepDescFinish;
+        color: rgba(51, 51, 51, 1);
+    }
+
+    .stepDescWaiting {
+        .stepDescFinish;
+        color: rgba(156, 157, 157, 1);
+    }
+}

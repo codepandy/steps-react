@@ -1,5 +1,5 @@
 {
-  "name": "steps-react",
+  "name": "@wenmu/steps-react",
   "version": "1.0.0",
   "description": "一个简单的react setps组件",
   "main": "./build/bundle.js",
@@ -10,7 +10,7 @@
     "start": "webpack-dev-server --config config/webpack.config.dev.js",
     "build": "webpack --config config/webpack.config.pro.js",
     "prepub": "npm run build",
-    "pub": "npm publish"
+    "pub": "npm publish --access=public"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,10 @@
     "react",
     "steps",
     "react-steps",
-    "steps-react"
+    "steps-react",
+    "@wenmu/steps-react"
   ],
-  "author": "",
+  "author": "wenmu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/codepandy/steps-react/issues"
